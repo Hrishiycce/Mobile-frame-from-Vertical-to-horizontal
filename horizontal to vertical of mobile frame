@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Pride School-About</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="TPS-Logo-PNG-2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        .Extra {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 85vh; /* Full viewport height for centering */
+            padding: 10px;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            justify-content: center; /* Align items horizontally */
+            gap: 120px;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+
+
+        .iphone-frame {
+            position: relative;
+            width: 250px; /* Default iPhone width */
+            height: 500px; /* Default iPhone height */
+            border: 4px solid #000;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            background: #fff;
+        }
+
+        .iphone-frame iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .caption-container {
+            max-width: 500px; /* Default max width */
+            max-height: 500px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .caption-container h3 {
+            padding-top: 0.5rem;
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .caption-container p {
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .hashtags p {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .keywords p {
+            color: #777;
+            font-size: 0.9em;
+            margin-top: 15px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .logo-1 {
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        /* Responsive Styles */
+
+        /* For smaller laptops or minimized windows */
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                gap: 15px;
+                margin: 15px;
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center align for better appearance */
+            }
+
+            .iphone-frame {
+                width: 80%; /* Adjust width to fit the screen */
+                height: auto; /* Maintain aspect ratio */
+                max-width: 350px; /* Limit the maximum width */
+            }
+
+            .caption-container {
+                max-height: 80%;
+                max-width: 80%; /* Adjust width to fit screen */
+                text-align: center; /* Center text */
+                padding: 15px; /* Adjust padding for smaller screens */
+            }
+
+            .caption-container h3 {
+                font-size: 1.3em; /* Adjust font size */
+            }
+
+            .caption-container p {
+                font-size: 0.95em; /* Adjust font size */
+            }
+        }
+
+        /* For mobile devices */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+                gap: 10px;
+                margin: 10px;
+                align-items: center;
+            }
+
+            .iphone-frame {
+                width: 90%; /* Expand width to fill mobile screen */
+                height: auto;
+                max-width: 320px; /* Limit maximum width */
+            }
+
+            .caption-container {
+                max-height: 90%;
+                max-width: 90%; /* Adjust width */
+                margin-top: 15px; /* Add spacing above captions */
+                padding: 10px; /* Adjust padding */
+            }
+
+            .caption-container h3 {
+                font-size: 1.2em;
+            }
+
+            .caption-container p {
+                font-size: 0.9em;
+            }
+
+            .hashtags p,
+            .keywords p {
+                font-size: 0.85em; /* Adjust font size for hashtags and keywords */
+            }
+
+            .logo-1 {
+                width: 1.5rem; /* Adjust logo size */
+                height: 1.5rem;
+            }
+        }
+
+        /* For extra small devices */
+        @media (max-width: 480px) {
+            .caption-container h3 {
+                font-size: 1.1em;
+            }
+
+            .caption-container p {
+                font-size: 0.85em;
+            }
+
+            .hashtags p,
+            .keywords p {
+                font-size: 0.75em;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="logo.png" alt="Logo" style="height: 50px; width: auto;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link active">About</a>
+                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <a href="join.html" class="btn btn-warning py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-warning py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">About Us</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Extra Start -->
+    <div class="Extra">
+        <div class="content-wrapper">
+            <div class="iphone-frame">
+                <iframe id="shorts-player" 
+                        src="https://www.youtube.com/embed/HndV87XpkWg?autoplay=1&mute=1" 
+                        frameborder="0" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen></iframe>
+            </div>
+            <div class="caption-container">
+                <div class="head">
+                <h5><img src="TPS-Logo-PNG-2.png" alt="logo" class="logo-1">  theprideschoolngp</h5>
+                </div>
+                <h3>Flip & Run! 🪑🏃‍♂️</h3>
+                <p>Watch our school kids at The Pride School Hingna flip chairs and race to the finish line.
+                    Enjoy the excitement as school kids at The Pride School Hingna play a thrilling game where
+                    they flip 4-5 chairs into their normal position and race to the finish line. 
+                    The first one to reach the end wins the game! This fun and engaging activity promotes quick 
+                    thinking, agility, and a lot of laughter. Join us in celebrating the joy of playful learning!
+                </p>
+                <div class="hashtags">
+                    <p>
+                        #ThePrideSchoolHingna #FunGames #SchoolActivities #StudentGames #ChairFlipChallenge #JoyfulLearning #RaceToFinish
+                    </p>
+                </div>
+                <div class="keywords">
+                    <p>
+                        The Pride School Hingna, Fun Games, School Activities, Chair Flip Game, Student Games, Race to Finish
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="Extra">
+        <div class="content-wrapper">
+            <div class="caption-container">
+                <div class="head">
+                <h5><img src="TPS-Logo-PNG-2.png" alt="logo" class="logo-1">  theprideschoolngp</h5>
+                </div>
+                <h3>Meet the Farmer and His Three Sons 🌾👨‍🌾👦👦👦</h3>
+                <p>
+                    Join us as we begin the story of "The Farmer and His Three Sons" at The Pride School Hingna. 
+                    In this first part, we introduce the wise farmer and his three hardworking sons. 🌾👨‍🌾 Follow along as 
+                    we learn valuable lessons from this timeless tale.
+                </p>
+                <div class="hashtags">
+                    <p>
+                        #ThePrideSchoolHingna #FarmersWisdom #FamilyValues #StoryTime #EducationalStories
+                    </p>
+                </div>
+                <div class="keywords">
+                    <p>
+                        The Pride School Hingna, Farmer and His Three Sons, Story Time, Lesson, Family
+                    </p>
+                </div>
+            </div>
+            <div class="iphone-frame">
+                <iframe id="shorts-player" 
+                        src="https://www.youtube.com/embed/HndV87XpkWg?autoplay=1&mute=1" 
+                        frameborder="0" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="Extra">
+        <div class="content-wrapper">
+            <div class="iphone-frame">
+                <iframe id="shorts-player" 
+                        src="https://www.youtube.com/embed/HndV87XpkWg?autoplay=1&mute=1" 
+                        frameborder="0" 
+                        allow="autoplay; encrypted-media" 
+                        allowfullscreen></iframe>
+            </div>
+            <div class="caption-container">
+                <div class="head">
+                <h5><img src="TPS-Logo-PNG-2.png" alt="logo" class="logo-1">  theprideschoolngp</h5>
+                </div>
+                <h3>Meet the Farmer and His Three Sons 🌾👨‍🌾👦👦👦</h3>
+                <p>
+                    Join us as we begin the story of "The Farmer and His Three Sons" at The Pride School Hingna. 
+                    In this first part, we introduce the wise farmer and his three hardworking sons. 🌾👨‍🌾 Follow along as 
+                    we learn valuable lessons from this timeless tale.
+                </p>
+                <div class="hashtags">
+                    <p>
+                        #ThePrideSchoolHingna #FarmersWisdom #FamilyValues #StoryTime #EducationalStories
+                    </p>
+                </div>
+                <div class="keywords">
+                    <p>
+                        The Pride School Hingna, Farmer and His Three Sons, Story Time, Lesson, Family
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        
+    <!-- Extra End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>367, Lokmanya Nagar, Hinga, Nagpur, Maharashtra</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 9370998716</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>ThePrideSchool@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <!-- <i class="bi bi-twitter-x"></i> -->
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/g-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/g-2.JPG" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/g-3.JPG" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/g-4.JPG" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/k.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/photo1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">For more details and inquiries, please email us</h4>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <a href="mailto:example@email.com?subject=Subject Here&body=Message Here">
+                        <button type="button" class="btn btn-warning py-2 position-absolute top-0 end-0 mt-2 me-2">Mail</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">The Pride School</a>, All Right Reserved.
+                        Designed By <a class="border-bottom" href="https://hrishiycce.github.io/">Hrishikesh Kakde</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-warning btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
